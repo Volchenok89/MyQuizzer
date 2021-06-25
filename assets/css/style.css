@@ -1,28 +1,65 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 body {
-    background-color: #e7e0e0e8;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url("../images/babydriver.jpg");
-    color: lawngreen;
+  background-color: #e7e0e0e8;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../images/babydriver.jpg");
+  color: lawngreen;
 }
 
-header { 
-    padding: 20px 20px 20px 20px;
-    color: rgb(17, 208, 233);
-    display: flex;
-    font-weight: 900;
-    justify-content: space-between;
-    flex-wrap: wrap;
+header {
+  padding: 20px 20px 20px 20px;
+  color: rgb(17, 208, 233);
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
 
 .timer {
-    padding-right: px;
-    color:rgb(12, 194, 218);
+  padding-right: px;
+  color: rgb(12, 194, 218);
+}
+
+
+main {
+  margin: 150px 450px 300px 800px;
+  border: black solid 3px;
+  text-align: center;
+  width: 40%;
+  padding: 20px;
+}
+
+
+main h2 {
+  padding: 10px;
+  color: darkblue;
+}
+
+
+main p {
+  padding: 10px;
+  margin: 10px 0 20px 0;
+}
+
+
+main ul {
+  padding: 10px;
+}
+
+
+button {
+    background-color: #9722ac;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    width: 40%;
 }
 
