@@ -239,5 +239,19 @@ function scoreDisplay() {
 let clear = document.getElementById("clear");
 let replay = document.getElementById("replay");
 
+  
+//Delete storaged data//
+
+clear.addEventListener("click", function clearScore() {
+    window.localStorage.clear();
+    scoreFile.remove();
+});
 
 
+//Restart game//
+
+replay.addEventListener("click", function replay() {
+    location.reload();
+});
+
+beginBtn.onclick = countdown;
