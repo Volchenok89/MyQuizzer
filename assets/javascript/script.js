@@ -71,3 +71,49 @@ let testQuestions = [{
 },
 ]
 
+//Beginning score 0 // 
+
+let score = 0;
+let timerEl = document.getElementById('timer');
+let beginBtn = document.getElementById('begin');
+let holderEl = document.getElementById('holder');
+let quizzerEl = document.getElementById('quizzer');
+let timeLeft = 120;
+let lastQuestion = false;
+
+
+//Timer //
+function countdown() {
+
+    let timeInterval = setInterval(function () {
+        if (timeLeft > 1) {
+            timerEl.textContent = 'Time Left: ' + timeLeft;
+            if (lastQuestion) return clearInterval(timeInterval);
+            timeLeft--;
+        } else {
+            timerEl.textContent = '';
+            clearInterval(timeInterval);
+            quizzerOver();
+        }
+    }, 1000);
+    quizzerDisplay(currentIndex);
+};
+
+//Quizzer answers//
+let answers = document.getElementById("answers");
+let answerA = document.getElementById("answerA");
+let answerB = document.getElementById("answerB");
+let answerC = document.getElementById("answerC");
+let answerD = document.getElementById("answerD");
+let currentIndex = 0;
+
+
+function quizzerDisplay(index) {
+    quizzerEl.innerHTML = testQuestions[index].question;
+    beginBtn.remove();
+    answers.style.display = "inline-block";
+    answerA.innerHTML = testQuestions[index].answerA;
+    answerB.innerHTML = testQuestions[index].answerB;
+    answerC.innerHTML = testQuestions[index].answerC;
+    answerD.innerHTML = testQuestions[index].answerD;
+};
