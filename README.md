@@ -25,7 +25,7 @@ Rule 7. After done with the quizzer, you can restart.<br>
 
 -JavaScript
 
-## Repository adress
+## Repository address
 https://github.com/Volchenok89/MyQuizzer
 
 ## Website
