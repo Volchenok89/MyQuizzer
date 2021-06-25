@@ -117,3 +117,54 @@ function quizzerDisplay(index) {
     answerC.innerHTML = testQuestions[index].answerC;
     answerD.innerHTML = testQuestions[index].answerD;
 };
+
+//Button click//
+answerA.addEventListener("click", checkAnswer);
+answerB.addEventListener("click", checkAnswer);
+answerC.addEventListener("click", checkAnswer);
+answerD.addEventListener("click", checkAnswer);
+let result = document.getElementById("result");
+
+function checkAnswer(e) {
+    //User id//
+
+    let userInput = e.target.id;
+
+    // Confirming correct answer//
+
+    if (userInput === testQuestions[currentIndex].correctpick) {
+        result.innerHTML = "AWESOME!!!";
+        console.log("correct!");
+
+    } else {
+        result.innerHTML = "KEEP TRYING!";
+        timeLeft -= 15;
+        console.log("wrong");
+
+    }
+  
+     //To next question//
+     currentIndex++;
+
+     //End of everything//
+     if (currentIndex === testQuestions.length || timeLeft === 0) {
+         quizzerOver();
+ 
+     } else {
+ 
+         //Show new question//
+         setTimeout(function () {
+             quizzerDisplay(currentIndex);
+             result.innerHTML = "";
+         }, 500);
+     }
+ };
+ 
+ 
+ let lastScreen = document.getElementById("last-screen");
+ let totalScore = document.getElementById("total-score");
+ let userInput = document.getElementById("initials");
+ let scoreDivider = document.getElementById("score-divider");
+ let scoreFile = document.getElementById('results');
+ 
+ function quizzerOver() {
