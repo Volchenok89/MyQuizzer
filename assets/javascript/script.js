@@ -213,3 +213,31 @@ totalScore.innerHTML = timeLeft;
 
 };
 
+//Show Score //
+
+function scoreDisplay() {
+    lastScreen.classList.add('leave');
+    scoreDivider.classList.remove('leave');
+
+ // Show storaged data//
+
+ let userScore = localStorage.getItem("userScore");
+ userScore = JSON.parse(userScore);
+ console.log(userScore);
+
+    //Show score from storaged data//
+
+    if (userScore !== null) {
+        for (let i = 0; i < userScore.length; i++) {
+            let createLi = document.createElement("li");
+            createLi.innerText = userScore[i].initials + " " + userScore[i].score;
+            scoreFile.appendChild(createLi);
+        }
+    }
+};
+
+let clear = document.getElementById("clear");
+let replay = document.getElementById("replay");
+
+
+
