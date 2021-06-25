@@ -13,7 +13,7 @@ Rule 3. When time is up, you can't keep answering.<br>
 Rule 4. You can't leave the quiz while playing.<br>
 Rule 5. You will score only with correct answers.<br>
 Rule 6. You can't go back on the answers.<br>
-Rule 7. After done with the test, you will be able to restart if you wish to.<br>
+Rule 7. After done with the quizzer, you can restart.<br>
 
 
 
