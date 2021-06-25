@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #e7e0e0e8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("");
+    color: lawngreen;
+}
+
