@@ -32,7 +32,9 @@ https://github.com/Volchenok89/MyQuizzer
 
 https://volchenok89.github.io/MyQuizzer/
 
-![driverscreenshot](https://user-images.githubusercontent.com/77917594/123384329-1e24f700-d549-11eb-984f-ecf67e7273fd.png)
+
+![driverscreenshot](https://user-images.githubusercontent.com/77917594/123387800-05b6db80-d54d-11eb-859d-ee98e6478902.png)
+
 
 
 
