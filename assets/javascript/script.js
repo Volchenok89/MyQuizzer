@@ -168,3 +168,48 @@ function checkAnswer(e) {
  let scoreFile = document.getElementById('results');
  
  function quizzerOver() {
+
+//Delete last question//
+
+      quizzerEl.remove();
+      answers.remove();
+      result.remove();
+
+ //Stop timer//
+
+ lastQuestion = true;
+
+ //Show final screen//
+
+lastScreen.classList.remove('leave');
+totalScore.innerHTML = timeLeft;
+
+//Player initials//
+
+    let enter = document.getElementById("enter")
+    enter.addEventListener("click", function highscore() {
+        let userInitials = userInput.value;
+        if (userInitials === null) {
+            alert("Initials here")
+            return;
+        } else {
+            let totalScore = {
+                initials: userInitials,
+                score: timeLeft
+            };
+            console.log(totalScore);
+            let userScore = localStorage.getItem('userScore');
+            if (userScore === null) {
+                userScore = [];
+            } else {
+                userScore = JSON.parse(userScore);
+            }
+            userScore.push(totalScore);
+            let newScore = JSON.stringify(userScore);
+            localStorage.setItem("userScore", newScore);
+            scoreDisplay();
+        }
+    })
+
+};
+
